@@ -1,4 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { withContentlayer } from "next-contentlayer2";
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/jay03jain/augmentaa/**",
+      },
+    ],
+  },
+};
+
+export default withContentlayer(nextConfig);

@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0d0d0d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer base {
+  body {
+    @apply text-gray-600;
+    line-height: 1.75;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-ink;
+  }
+}
+
+@layer components {
+  .section-overline {
+    @apply border-l-2 border-brand pl-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand;
+  }
+
+  /**
+   * Premium card: border, hover shadow, teal top sweep.
+   * Use with `group` on the same element as `card-premium`.
+   */
+  .card-premium {
+    @apply relative overflow-hidden rounded-2xl border border-gray-100 bg-white transition-[box-shadow,border-color] duration-300 ease-out hover:border-teal-200 hover:shadow-lg hover:shadow-teal-100/50;
+  }
+
+  .card-premium-topline {
+    @apply pointer-events-none absolute inset-x-0 top-0 z-10 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-teal-400 to-green-400 transition-transform duration-300 ease-out group-hover:scale-x-100;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
