@@ -47,6 +47,7 @@ Optional:
 - `NEXT_PUBLIC_GA_ID` — GA4 measurement ID
 - `NEXT_PUBLIC_UMAMI_WEBSITE_ID` / `NEXT_PUBLIC_UMAMI_SRC` — Umami tracking
 - `DATABASE_URL` — Neon Postgres connection string (form submissions are logged here when set)
+- `ADMIN_USERNAME` — protects `/admin` (server-only; not prefixed with `NEXT_PUBLIC_`)
 - `ADMIN_PASSWORD` — protects `/admin` (server-only; not prefixed with `NEXT_PUBLIC_`)
 
 ### Database (Neon)
